@@ -6,6 +6,11 @@ import Dashborad from "../pages/Dashboard/Dashborad";
 import Login from "../pages/Auth/Login";
 import Brand from "../pages/Brand/Brand";
 import Cities from "../pages/Cities/Cities";
+import Billing from "../pages/Billing/Billing";
+import Sittings from "../pages/Sittings/Sittings";
+import Exam from "../pages/Exams/Exam";
+import Students from "../pages/Students/Students";
+import Logout from "../pages/Auth/Logout";
 
 const router = createBrowserRouter([
   {
@@ -26,14 +31,30 @@ const router = createBrowserRouter([
         element: <Cities />,
       },
       {
-        path: "/location",
-        element: <Location />,
+        path: "/billing",
+        element: <Billing />,
+      },
+      {
+        path: "/students",
+        element: <Students />,
+      },
+      {
+        path: "/sittings",
+        element: < Sittings/>,
+      },
+      {
+        path: "/exams",
+        element: < Exam/>,
       },
     ],
   },
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/logout",
+    element: <Logout />,
   },
 ]);
 

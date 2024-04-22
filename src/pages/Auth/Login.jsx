@@ -3,9 +3,10 @@ import styles from "./Login.module.css";
 import { CiUser } from "react-icons/ci";
 import { RiLockPasswordLine } from "react-icons/ri";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 
 function Login() {
   const [data, setData] = useState({ phone_number: "", password: "" });
@@ -67,8 +68,13 @@ function Login() {
         />
       </div>
       <button type="submit" className={styles["submit-btn"]}>
-        Submit
+        Log in
       </button>
+      
+      <Link to={'/logout'}>
+      <p className=" mt-2 text-blue-500 text-[14px] font-semibold">Sign up</p>
+
+      </Link>
     </form>
   );
 }

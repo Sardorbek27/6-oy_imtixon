@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +23,7 @@ body {
   display: block;
   margin: 0 auto;
   height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 main {
@@ -26,6 +33,8 @@ main {
 
 .main-container {
   display: flex;
+  background: #f8f8f8 !important;
+
 }
 
 .second-container {
@@ -35,10 +44,24 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
+.ant-menu-item-only-child { 
+  text-align: center !important;
+}
+
+.logo_content  p {
+  margin-top: 30px;
+  font-size: 14px ;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ant-menu {
+  background: #152259 !important;
+  
+}
 
 .active {
   .ant-menu-item-selected {
-    background: #eabf9f !important;
     border-radius: 0px !important;
     margin: 0 !important;
     width: 100% !important;
@@ -47,13 +70,11 @@ main {
 
 aside {
   min-height: fit-content;
+  max-height: 100%;
+
 
   & ul {
     height: 100%;
-  }
-
-  .ant-menu-inline {
-    background: #01384d !important;
   }
 
   .ant-menu-title-content {
@@ -61,34 +82,79 @@ aside {
   }
 
   .ant-menu-item {
-    padding: 30px 40px !important;
-    border-radius: 0px !important;
+    padding: 20px 40px !important;
+    border-radius: 60px !important;
     margin: 0 !important;
-    width: 100% !important;
-    border-bottom: 1px solid #054863;
+    border-bottom: 1px solid #152259;
 
   }
 
   .ant-menu-item-selected {
-    background: #eabf9f !important;
-    border-radius: 0px !important;
+    background: #509CDB !important;
+    border-radius: 10px !important;
     margin: 0 !important;
     width: 100% !important;
-
   }
 }
 
 .ant-table-thead th.thead-bg {
-  background-color: #01384d !important;
+  background-color: #152259 !important;
   color: #FFFFFF !important;
   border: none !important;
 }
 
-.ant-table-cell {
-  border-bottom: 1px solid #f0f0f0 !important;
-  border-right: 1px solid #f0f0f0;
-  border-left: 1px solid #f0f0f0;
-}
 td.ant-table-cell {
   height: 40px !important;
+}
+.ant-table-cell .ant-empty-normal {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important; 
+}
+.ant-empty {
+  height: 42vh;
+}
+
+.ant-empty-image {
+  height: 255px !important;
+  width: 340px !important;
+  background-image: url('./image/banner-removebg-preview.png') !important;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.ant-empty-image svg {
+  display: none;
+}
+
+
+.ant-empty-image::after {
+  content: "No Teachers at this time" !important;
+  display: block !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  color: #333 !important;
+  z-index: 1000 !important;
+  position: relative;
+  margin-top: 20px;
+  top: 70%;
+}
+.ant-empty-image::before {
+  content: "Teachers will appear here after they enroll in your school.  " !important;
+  display: block !important; 
+  font-size: 12px !important; 
+  color: #333 !important; 
+  z-index: 1000 !important;
+  position: relative;
+  margin-top: 40px;
+  top: 100%;
+}
+.ant-empty-description {
+  display: none;
+}
+.ant-input-number-input {
+  border: none !important;
+  background: #ffffff !important;
 }

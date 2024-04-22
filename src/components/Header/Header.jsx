@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegUser } from "react-icons/fa6";
+import { CiBellOn } from "react-icons/ci";
 
 import "./Header.css";
 import { Dropdown, message } from "antd";
@@ -30,9 +30,9 @@ const Header = () => {
       <Dropdown menu={{ items }} placement="bottom" arrow>
         <div className="user">
           <div className="user_icon">
-            <FaRegUser />
+          <CiBellOn />
           </div>
-          <span>{localStorage.getItem("userName")}</span>
+          <span style={{color: 'black'}}>Log Out</span>
         </div>
       </Dropdown>
     </header>
